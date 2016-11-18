@@ -45,6 +45,8 @@ std::string getOsName()
 
 
 void ngiStart() {
+    string calcType;
+    int alarmTime;
     string alertTime;
     string appId;
     string cmd = "null";
@@ -69,14 +71,27 @@ void ngiStart() {
     }else if (cmd == "/appList") {
         std::cout << "\n=========================================================\n";
         std::cout << "Calculator (id:calc);\nNotes (id:notes);\n";
-        std::cout << "=========================================================";
+       
         ngiStart();
     }else if (cmd == "/open") {
         std::cout << "Which application do you want to open? (type an id of app, for example 'calc' or 'notes' ";
         
         cin >> appId;
         if (appId == "calc") {
-            
+        std::cout << "Type type of the calculation (+ - / *)";
+        cin >> calcType;
+        if (calcType == "+") {
+            }else if (calcType == "+") {
+                
+            }else if (calcType == "-") {
+                
+            }else if (calcType == "/") {
+                
+            }else if (calcType == "*") {
+                
+            }else{
+                std::cout << "Sorry, that type of calculation isn't avalible now";
+            }
         }else{    
         std::cout << "ERROR: Invaild ID."    ;
         ngiStart();}
